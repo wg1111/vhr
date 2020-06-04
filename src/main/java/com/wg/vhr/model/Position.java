@@ -1,5 +1,6 @@
 package com.wg.vhr.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,7 +10,8 @@ public class Position {
 
     private String name;
 
-    private Date createdate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Beijing")
+    private Date createDate;
 
     private Boolean enabled;
 

@@ -1,4 +1,4 @@
-package com.wg.vhr.controller;
+package com.wg.vhr.controller.config;
 
 import com.wg.vhr.model.Menu;
 import com.wg.vhr.service.MenuService;
