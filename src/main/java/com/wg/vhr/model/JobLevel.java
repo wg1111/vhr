@@ -1,5 +1,6 @@
 package com.wg.vhr.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,9 +10,10 @@ public class JobLevel {
 
     private String name;
 
-    private String titlelevel;
+    private String titleLevel;
 
-    private Date createdate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Beijing")
+    private Date createDate;
 
     private Boolean enabled;
 
