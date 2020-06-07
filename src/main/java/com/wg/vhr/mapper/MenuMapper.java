@@ -20,4 +20,10 @@ public interface MenuMapper {
     List<Menu> getMenusByHrId(Integer hrId);
 
     List<Menu> getAllMenusWithRole();
+
+    List<Menu> getAllMenus();
+
+    List<Integer> getMidsByRid(Integer rid);
+
+    boolean updateMenuRole(Integer rid, Integer[] mids);
 }

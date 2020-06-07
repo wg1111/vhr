@@ -137,6 +137,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             @Override
             public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
                 response.setContentType("application/json;charset=utf-8");
+                response.setStatus(401);
                 PrintWriter out = response.getWriter();
                 ResponseBean responseBean = ResponseBean.error("访问失败！");
                 if (exception instanceof InsufficientAuthenticationException) {
