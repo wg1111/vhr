@@ -1,6 +1,7 @@
 package com.wg.vhr.mapper;
 
 import com.wg.vhr.model.HrRole;
+import org.apache.ibatis.annotations.Param;
 
 public interface HrRoleMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +15,8 @@ public interface HrRoleMapper {
     int updateByPrimaryKeySelective(HrRole record);
 
     int updateByPrimaryKey(HrRole record);
+
+    void deleteByHrId(Integer hrid);
+
+    Integer addRole(@Param("hrid") Integer hrid, @Param("rids") Integer[] rids);
 }
