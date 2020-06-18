@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <oshi.version>3.9.1</oshi.version>
     </properties>
 
     <dependencies>
@@ -82,6 +83,17 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <!-- 获取系统信息 -->
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>${oshi.version}</version>
         </dependency>
     </dependencies>
 
