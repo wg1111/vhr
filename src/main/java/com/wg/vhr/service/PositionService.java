@@ -5,7 +5,6 @@ import com.wg.vhr.model.Position;
 import com.wg.vhr.model.ResponseBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.yaml.snakeyaml.events.Event;
 
 import java.util.Date;
 import java.util.List;

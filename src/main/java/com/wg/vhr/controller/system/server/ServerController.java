@@ -20,6 +20,7 @@ public class ServerController {
     {
         Server server = new Server();
         server.copyTo();
-        return ResponseBean.success("操作成功！",server);
+        ResponseBean responseBean = new ResponseBean().build().setStatus(200).setObj(server);
+        return responseBean;
     }
 }

@@ -6,13 +6,16 @@ import lombok.Data;
  * author:insane
  * Date:2020/5/2719:57
  **/
-@Data
 public class ResponseBean {
     private Integer status;
 
     private String msg;
 
     private Object obj;
+
+    public static ResponseBean build() {
+        return new ResponseBean();
+    }
 
     public static ResponseBean success(String msg){
         return new ResponseBean(200,msg,null);
@@ -37,5 +40,33 @@ public class ResponseBean {
         this.status = status;
         this.msg = msg;
         this.obj = obj;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public ResponseBean setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public ResponseBean setMsg(String msg) {
+        this.msg = msg;
+        return this;
+
+    }
+
+    public Object getObj() {
+        return obj;
+    }
+
+    public ResponseBean setObj(Object obj) {
+        this.obj = obj;
+        return this;
     }
 }

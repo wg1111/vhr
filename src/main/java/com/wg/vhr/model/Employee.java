@@ -1,5 +1,6 @@
 package com.wg.vhr.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -11,17 +12,18 @@ public class Employee {
 
     private String gender;
 
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
     private Date birthday;
 
-    private String idcard;
+    private String idCard;
 
     private String wedlock;
 
-    private Integer nationid;
+    private Integer nationId;
 
-    private String nativeplace;
+    private String nativePlace;
 
-    private Integer politicid;
+    private Integer politicId;
 
     private String email;
 
@@ -29,36 +31,53 @@ public class Employee {
 
     private String address;
 
-    private Integer departmentid;
+    private Integer departmentId;
 
-    private Integer joblevelid;
+    private Integer jobLevelId;
 
-    private Integer posid;
+    private Integer posId;
 
-    private String engageform;
+    private String engageForm;
 
-    private String tiptopdegree;
+    private String tiptopDegree;
 
     private String specialty;
 
     private String school;
 
-    private Date begindate;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
+    private Date beginDate;
 
-    private String workstate;
+    private String workState;
 
-    private String workid;
+    private String workID;
 
-    private Double contractterm;
+    private Double contractTerm;
 
-    private Date conversiontime;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
+    private Date conversionTime;
 
-    private Date notworkdate;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
+    private Date notWorkDate;
 
-    private Date begincontract;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
+    private Date beginContract;
 
-    private Date endcontract;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Beijing")
+    private Date endContract;
 
-    private Integer workage;
+    private Integer workAge;
+
+    //一对一关系
+
+    private Nation nations;
+
+    private PoliticsStatus politics;
+
+    private Department department;
+
+    private JobLevel jobLevels;
+
+    private Position positions;
 
 }

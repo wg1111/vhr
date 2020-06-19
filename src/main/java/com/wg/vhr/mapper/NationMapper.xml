@@ -8,8 +8,11 @@
   <sql id="Base_Column_List">
     id, name
   </sql>
+  <select id="getAllNation" resultMap="BaseResultMap">
+    select * from nation;
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from nation
     where id = #{id,jdbcType=INTEGER}

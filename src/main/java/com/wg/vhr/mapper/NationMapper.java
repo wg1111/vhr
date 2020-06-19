@@ -2,6 +2,8 @@ package com.wg.vhr.mapper;
 
 import com.wg.vhr.model.Nation;
 
+import java.util.List;
+
 public interface NationMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface NationMapper {
     int updateByPrimaryKeySelective(Nation record);
 
     int updateByPrimaryKey(Nation record);
+
+    List<Nation> getAllNation();
 }

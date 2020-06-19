@@ -2,6 +2,8 @@ package com.wg.vhr.mapper;
 
 import com.wg.vhr.model.PoliticsStatus;
 
+import java.util.List;
+
 public interface PoliticsStatusMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface PoliticsStatusMapper {
     int updateByPrimaryKeySelective(PoliticsStatus record);
 
     int updateByPrimaryKey(PoliticsStatus record);
+
+    List<PoliticsStatus> getAllPol();
 }
