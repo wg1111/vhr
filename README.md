@@ -1,3 +1,15 @@
 # vhr
 
-技术栈：springboot，springsecurity，mysql，redis，lombok，rabbitMQ
+技术栈：springboot，springsecurity，mysql，redis，lombok，rabbitMQ，
+
+已实现功能:
+1.系统管理----基本信息设置
+2.系统管理----服务监控
+3.系统管理----操作员管理
+4.员工资料----基本资料
+
+其他页面尚在开发中......
+
+目前部署版本为前后端整合一起部署，待项目完成后会部署上线前后端分离版本。
+
+ps：系统已实现了动态菜单+权限控制，用户可将用户名切换为xiaoming自行测试。
